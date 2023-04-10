@@ -159,9 +159,10 @@ nav li {font-size:20px;}
 
 
 /* footer */
-footer::before {display:block; content:''; width:100vh; height:100px; background:url('../img/bg_main_sns_bottom.jpg') no-repeat center bottom/ 100%; background-color:#FAF9F5; clear:both;}
+footer::before {display:block; content:''; height:100px; background:url('../img/bg_main_sns_bottom.jpg') no-repeat center bottom/ 100%; background-color:#FAF9F5; clear:both;}
 
 .footer_top {display:block; border-top:1px solid #FAF9F5; border-bottom:3px solid #FAF9F5;}
 .footer_top li {display:inline-block; max-width:100%; padding:15px 10px; font-weight:bold;}
 
-.footer_bottom {display:flex; justify-content:space-between; width:1040px; height:84px; margin:20px auto 50px; color:#5f5f5f;}
+.footer_bottom {display:flex; justify-content:space-between; height:84px; margin:20px auto 50px; color:#5f5f5f;}
+.bottom_info {width:1100px;}
