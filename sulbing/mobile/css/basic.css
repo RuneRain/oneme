@@ -39,18 +39,22 @@ h1 {flex:6; padding:5px; text-align:center;}
 .product_menu span {display:block; font-size:16px;}
 .new_product h2, .product_menu span {color:#795f4e;}
 
-
 /* menu */
 .menu {height:120px; text-align:center; margin:30px auto;}
 .menu li {float:left; width:159px; height:60px; border:1px solid #EBE2D3;}
 .menu span {display:block; margin-top:20px;}
 
-/* event */ 
-.event {}
-.event_img {margin-top:20px; height:300px; overflow:hidden;}
-.event_img li {display:block; height:300px;}
-.event_img img {width:100%;}
+/* event */
+.event {height:300px;}
+.event_img {width:640px; height:200px; overflow:hidden;}
+.event_img li {float:left; }
+.event_img img {width:640px; height:200px;}
 
+/* footer */
+footer {border-top:1px solid #EBE2D3;}
+.footer_info {margin:auto;}
+footer span {line-height:1.3;}
+address {margin-top:10px; font-size:14px; color:#795f4e;}
 
 
 /* gnb_open */
