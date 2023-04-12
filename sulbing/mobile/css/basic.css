@@ -1,13 +1,14 @@
 @charset "UTF-8";
 body {font-family:Verdana, Geneva, Tahoma, sans-serif;}
 a {color:inherit;}
-h2 {font-size:24px;}
+h2 {font-family: 'Playfair Display', serif; font-size:24px; text-align:center;}
 button {border:none; background:none; cursor:pointer;}
-main {width:640px;}
+main, footer {width:640px; margin:auto;}
+ul::after {display:block; content:''; clear:both;}
 
 /* header */
-header {position:fixed; height:80px; background:#fff;}
-.top_menu {display:flex; width:640px;}
+header {position:fixed; top:0; left:0; right:0;  max-width:640px; min-width:320px; margin:auto;}
+.top_menu {display:flex; width:640px; height:80px; background:#fff;}
 .top menu > div {flex:2;}
 h1 {flex:6; padding:5px; text-align:center;}
 .top_menu span {display:block; font-size:40px; margin:15px auto; color:#795f4e}
