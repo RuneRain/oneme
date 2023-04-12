@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Song+Myung&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/basic.css">
+    <script src="js/prefixfree.min.js"></script>
+    <script src="js/jquery-3.6.4.min.js"></script>
+    <script defer src="js/main.js"></script>
+</head>
+<body>
+    <header>
+        <div class="side_nav">
+            <div class="inner">
+                <ul>
+                    <li><a href="#">로그인</a></li>
+                    <li><a href="#">회원가입</a></li>
+                    <li><a href="#">고객센터</a></li>
+                </ul>
+            </div>
+        </div>
+        <nav>
+            <div class="inner">
+                <span><img src="img/logo.jpg" alt="설빙로고"></span>
+                <ul class="gnb">
+                    <li><a href="#">브랜드</a></li>
+                    <li><a href="#">메뉴</a></li>
+                    <li><a href="#">이벤트</a></li>
+                    <li><a href="#">매장찾기</a></li>
+                    <li><a href="#">프랜차이즈</a></li>
+                </ul>
+            </div>
+            <div class="gnbSubWrap">
+                <div class="gnbSubBox">
+                    <ul>
+                        <li><a href="#">브랜드</a></li>
+                        <li><a href="#">설빙&광고영상</a></li>
+                        <li><a href="#">뉴스&공지사항</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">신제품</a></li>
+                        <li><a href="#">설빙</a></li>
+                        <li><a href="#">디저트</a></li>
+                        <li><a href="#">음료</a></li>
+                        <li><a href="#">MD</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">이벤트</a></li>
+                        <li><a href="#">e쿠폰</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">매장찾기</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">국내 가맹점 개설 안내</a></li>
+                        <li><a href="#">해외 가맹점 개설 안내</a></li>
+                    </ul>
+                    <img src="img/banner.png" alt="더블초코설빙">
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="title">
+            <h2>
+                <img src="img/ico_tit_arrow_left.jpg" alt="">
+                <span>메뉴</span>
+                <img src="img/ico_tit_arrow_right.jpg" alt="">
+            </h2>
+            <div class="sub_nav">
+                <a href="#"><span>홈</span></a>
+                <span>> 메뉴</span>
+            </div>
+        </div>
+        <div class="img_banner">
+            <span><img src="img/img_banner.jpg" alt=""></span>
+            <span><img src="img/img_banner.jpg" alt=""></span>
+            <span><img src="img/img_banner1.jpg" alt=""></span>
+            <span><img src="img/img_banner2.jpg" alt=""></span>
+            <span><img src="img/img_banner.jpg" alt=""></span>
+        </div>
+        <menu>
+            <ul>
+                <li class="active"><a href="#"><img src="img/menu_all_off.png" alt="전체메뉴"><strong>전체메뉴</strong></a></li>
+                <li><a href="#"><img src="img/menu_bingsu_off.png" alt="빙수"><strong>빙수</strong></a></li>
+                <li><a href="#"><img src="img/menu_desert_off.png" alt="디저트"><strong>디저트</strong></a></li>
+                <li><a href="#"><img src="img/menu_drink_off.png" alt="음료"><strong>음료</strong></a></li>
+                <li><a href="#"><img src="img/menu_md_off.png" alt="MD"><strong>MD</strong></a></li>
+            </ul>
+        </menu>
+        <div class="menu_nav">
+            <form action="" id="formSignUp">
+                <select name="" id="package">
+                    <option value="">신메뉴&인기메뉴</option>
+                    <option value="annual">신메뉴</option>
+                    <option value="monthly">인기메뉴</option>
+                </select>
+            </form>
+            <form action="" id="formSignUp">
+                <select name="" id="package">
+                    <option value="">재료별</option>
+                    <option value="">인절미</option>
+                    <option value="">열매</option>
+                    <option value="">초코</option>
+                    <option value="">치즈</option>
+                    <option value="">브레드</option>
+                </select>
+            </form>
+            <form action="" id="formSignUp">
+                <select name="" id="package">
+                    <option value="">테마별</option>
+                    <option value="annual">설빙</option>
+                    <option value="">프리미엄 시즌 설빙</option>
+                    <option value="">커피</option>
+                    <option value="">열매음료</option>
+                    <option value="">라떼</option>
+                    <option value="">스무디</option>
+                    <option value="">디저트</option>
+                    <option value="">MD</option>
+                </select>
+            </form>
+            <div class="sub_menu">
+                <span>초기화</span>
+                <span>적용</span>
+            </div>
+        </div>
+        <div class="product_wrap">
+            <div class="all">
+                <ul>
+                    <li>
+                        <img src="img/bingsu.png" alt="생딸기크럼블설빙">
+                        <span>생딸기크럼블설빙</span>
+                    </li>
+                    <li>
+                        <img src="img/bingsu01.png" alt="순수요거딸기설빙">
+                        <span>순수요거딸기설빙</span>
+                    </li>                    
+                    <li>
+                        <img src="img/bingsu02.png" alt="프리미엄생딸기설빙">
+                        <span>프리미엄생딸기설빙</span>
+                    </li>
+                    <li>
+                        <img src="img/bingsu03.png" alt="생딸기설빙">
+                        <span>생딸기설빙</span>
+                    </li>
+                    <li>
+                        <img src="img/desert03.png" alt="">
+                        <span>생딸기허니브레드</span>
+                    </li>
+                    <li>
+                        <img src="img/desert05.png" alt="">
+                        <span>생딸기케이크</span>
+                    </li>
+                    <li>
+                        <img src="img/md.png" alt="딸기마카롱">
+                        <span>딸기마카롱</span>
+                    </li>
+                    <li>
+                        <img src="img/drink01.png" alt="">
+                        <span>베리베리요거트스무디</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="bingsu">
+                <ul>
+                    <li>
+                        <img src="img/bingsu.png" alt="생딸기크럼블설빙">
+                        <span>생딸기크럼블설빙</span>
+                    </li>
+                    <li>
+                        <img src="img/bingsu01.png" alt="순수요거딸기설빙">
+                        <span>순수요거딸기설빙</span>
+                    </li>
+                    <li>
+                        <img src="img/bingsu02.png" alt="프리미엄생딸기설빙">
+                        <span>프리미엄생딸기설빙</span>
+                    </li>
+                    <li>
+                        <img src="img/bingsu03.png" alt="생딸기설빙">
+                        <span>생딸기설빙</span>
+                    </li>
+                    <li>
+                        <img src="img/bingsu04.png" alt="그린티초코설빙">
+                        <span>그린티초코설빙</span>
+                    </li>
+                    <li>
+                        <img src="img/bingsu05.png" alt="티라미수설빙">
+                        <span>티라미수설빙</span>
+                    </li>
+                    <li>
+                        <img src="img/bingsu06.png" alt="리얼그린티설빙">
+                        <span>리얼그린티설빙</span>
+                    </li>
+                    <li>
+                        <img src="img/bingsu07.png" alt="초코브라우니설빙">
+                        <span>초코브라우니설빙</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="desert">
+                <ul>
+                    <li>
+                        <img src="img/desert.png" alt="인절미토스트">
+                        <span>인절미토스트</span>
+                    </li>
+                    <li>
+                        <img src="img/desert01.png" alt="붕어빵">
+                        <span>붕어빵(슈)</span>
+                    </li>
+                    <li>
+                        <img src="img/desert02.png" alt="바바리안츄러스">
+                        <span>바바리안츄러스</span>
+                    </li>
+                    <li>
+                        <img src="img/desert03.png" alt="생딸기허니브레드">
+                        <span>생딸기허니브레드</span>
+                    </li>
+                    <li>
+                        <img src="img/desert04.png" alt="인절미케이크">
+                        <span>인절미케이크</span>
+                    </li>
+                    <li>
+                        <img src="img/desert05.png" alt="생딸기케이크">
+                        <span>생딸기케이크</span>
+                    </li>
+                    <li>
+                        <img src="img/desert06.png" alt="흑임자케이크">
+                        <span>흑임자케이크</span>
+                    </li>
+                    <li>
+                        <img src="img/desert07.png" alt="망고케이크">
+                        <span>망고케이크</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="drink">
+                <ul>
+                    <li>
+                        <img src="img/drink.png" alt="딸기요거트스무디">
+                        <span>딸기요거트스무디</span>
+                    </li>
+                    <li>
+                        <img src="img/drink01.png" alt="베리베리요거트스무디">
+                        <span>베리베리요거트스무디</span>
+                    </li>
+                    <li>
+                        <img src="img/drink02.png" alt="딸기라떼">
+                        <span>딸기라떼</span>
+                    </li>
+                    <li>
+                        <img src="img/drink03.png" alt="딸기에이드">
+                        <span>딸기에이드</span>
+                    </li>
+                    <li>
+                        <img src="img/drink04.png" alt="블루베리요거트스무디">
+                        <span>블루베리요거트스무디</span>
+                    </li>
+                    <li>
+                        <img src="img/drink05.png" alt="아메리카노">
+                        <span>아메리카노</span>
+                    </li>
+                    <li>
+                        <img src="img/drink06.png" alt="허니자몽에이드">
+                        <span>허니자몽에이드</span>
+                    </li>
+                    <li>
+                        <img src="img/drink07.png" alt="애플망고에이드">
+                        <span>애플망고에이드</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="md">
+                <ul>
+                    <li>
+                        <img src="img/md.png" alt="딸기마카롱">
+                        <span>딸기마카롱</span>
+                    </li>
+                    <li>
+                        <img src="img/md01.png" alt="인절미마카롱">
+                        <span>인절미마카롱</span>
+                    </li>
+                    <li>
+                        <img src="img/md02.png" alt="사이다">
+                        <span>사이다</span>
+                    </li>
+                    <li>
+                        <img src="img/md03.png" alt="탄산수">
+                        <span>탄산수</span>
+                    </li>
+                    <li>
+                        <img src="img/md04.png" alt="사발식혜">
+                        <span>사발식혜</span>
+                    </li> 
+                    <li>
+                        <img src="img/md05.png" alt="한라봉감귤주스">
+                        <span>한라봉감귤주스</span>
+                    </li>
+                    <li>
+                        <img src="img/md06.png" alt="달고나">
+                        <span>달고나</span>
+                    </li>
+                    <li>
+                        <img src="img/md07.png" alt="인절미스낵">
+                        <span>인절미스낵</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+<footer>
+    <div class="footer_top">
+        <div class="inner">
+        <ul>
+            <li><a href="#">고객센터</a></li>
+            <li><a href="#">경영주 전용 페이지</a></li>
+            <li><a href="#">서비스 이용약관</a></li>
+            <li><a href="#">개인정보처리방침</a></li>
+            <li><a href="#">이메일무단수집거부</a></li>
+            <li><a href="#">법적고지</a></li>
+        </ul>
+        </div>
+    </div>
+    <div class="footer_bottom inner">
+        <div class="bottom_info">
+            <span>법인명: (주)설빙 사업자등록번호: 602-81-62460 <a href="#">[사업자정보확인]</a><br>
+                대표번호 : 02-3401-7900 팩스 : 02-447-8755 마케팅 제휴 이메일: marketing@sulbing.com<br>
+                본사주소: 서울 송파구 올림픽로 319 새마을 교통회관 8/11층<br>
+                COPYRIGHT SULBING 2013 ALL RIGHTS RESERVED</span>
+        </div>
+        <div class="footer_logo">
+            <img src="img/logo.jpg" alt="sulbing_logo">
+        </div>
+    </div>
+</footer>
+</body>
+</html>
