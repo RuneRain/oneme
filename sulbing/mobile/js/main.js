@@ -44,3 +44,20 @@ btn_subs.forEach(function(item,index){
       mainSliderUl.find('li:first-child').insertAfter(mainSliderUl.find('li:last-child')); 
     });
   },3000)
+
+/* event_img banner */
+$(function(){
+  const imgBannerWidth = $('.event_img img').width();
+  const imgBannerNember = $('.event_img img').length;
+  const BannerSliderUl = $('.event_img > ul');
+
+  BannerSliderUl.css({width:imgBannerWidth*imgBannerNember})
+
+
+  setInterval(function(){
+    BannerSliderUl.animate({'margin-left':-imgBannerWidth},300, 'swing', function(){
+      BannerSliderUl.css({'margin-left':0})
+      BannerSliderUl.find('li:first-child').insertAfter(BannerSliderUl.find('li:last-child')); 
+      });
+    },3000)
+})
