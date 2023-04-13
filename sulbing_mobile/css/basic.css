@@ -33,9 +33,9 @@ h1 {flex:6; padding:5px; text-align:center;}
 
 /* new_product */
 .new_product {text-align:center; background:#EBE2D3;}
-.new_product h2 {padding-top:30px; font-weight:bold;}
+.new_product h2 {padding-top:50px; font-weight:bold;}
 .product_menu ul {display:flex;}
-.product_menu li {flex:1; display:block; margin:30px auto;}
+.product_menu li {flex:1; display:block; margin:50px auto;}
 .product_menu img {width:90px; height:90px;}
 .product_menu span {display:block; font-size:16px;}
 .new_product h2, .product_menu span {color:#795f4e;}
