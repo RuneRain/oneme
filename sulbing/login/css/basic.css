@@ -68,8 +68,8 @@ input[type="submit"] {width:460px; height:60px; font-size:30px; border:none; col
 .naver_login span:first-child {color:green; font-weight:bold;}
 
 .login_text > input {width:360px; height:34px; vertical-align:top; text-align:center;}
-.login_text > button {width:40px; height:40px; margin-left:5px;}
-.login_text img {width:40px; height:40px; margin-left:5px;}
+.login_text > button {width:40px; height:40px; border:1px solid #796150; margin-left:5px; background:#fff;}
+.login_text img {width:24px; height:24px;}
 
 .info img {width:520px; height:540px;}
 
