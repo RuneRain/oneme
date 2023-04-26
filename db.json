@@ -1,0 +1,22 @@
+{
+  "data":[
+    {
+      "id":1,
+      "img":"img/Alexander.jpg",
+      "name":"Alexander",
+      "price":"10000",
+      "price_sale":"",
+      "located":"해외",
+      "area":"Auckland, 미국"
+    },
+    {
+      "id":2,
+      "img":"img/Alexander.jpg",
+      "name":"Alexander",
+      "price":"10000",
+      "price_sale":"",
+      "located":"해외",
+      "area":"Auckland, 미국"
+    }
+  ]
+}
