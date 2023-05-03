@@ -1,0 +1,111 @@
+{
+  "data":[
+    {
+      "class":1,
+      "img":"img/Alexander.jpg",
+      "name":"Alexander lnn",
+      "usa":"미국",
+      "area":"Auckland",
+      "price":"153,114원",
+      "price_sale":"156,238원"
+    },
+    {
+      "class":2,
+      "img":"img/Ellerbeck_Bed.webp",
+      "name":"Ellerbeck Bed & Breakfast",
+      "usa":"미국",
+      "area":"Salt Lake city",
+      "price":"316,396원",
+      "price_sale":"354,296원"
+    },
+    {
+      "class":3,
+      "img":"img/PrinceSmartInn.jpg",
+      "name":"Prince Smart Inn",
+      "japan":"일본",
+      "area":"Hakata",
+      "price":"153,153원",
+      "price_sale":"156,270원"
+    },
+    {
+      "class":4,
+      "img":"img/grandehakata.jpg",
+      "name":"Grande Hakata",
+      "japan":"일본",
+      "area":"Hakata",
+      "price":"115,024원",
+      "price_sale":"153,365원"
+    },
+    {
+      "class":5,
+      "img":"img/urbanStay.jpg",
+      "name":"어반스테이 속초등대",
+      "located":"한국,",
+      "sokcho":"속초",
+      "price":"174,048원",
+      "price_sale":"177,600원"
+    },
+    {
+      "class":6,
+      "img":"img/nanta.jpg",
+      "name":"호텔난타 제주",
+      "located":"한국,",
+      "jeju":"제주",
+      "price":"141,120원",
+      "price_sale":"144,000원"
+    },
+    {
+      "class":7,
+      "img":"img/ninetree.jpg",
+      "name":"나인트리 프리미어 호텔",
+      "located":"한국,",
+      "seoul":"성남 판교",
+      "price":"174,048원",
+      "price_sale":"177,600원"
+    },
+    {
+      "class":8,
+      "img":"img/millitopia.jpg",
+      "name":"밀리토피아 호텔",
+      "located":"한국,",
+      "seoul":"성남 위례",
+      "price":"141,120원",
+      "price_sale":"144,000원"
+    },
+    {
+      "class":9,
+      "img":"img/millitopia.jpg",
+      "name":"밀리토피아 호텔",
+      "located":"한국,",
+      "seoul":"성남 위례",
+      "price":"141,120원",
+      "price_sale":"144,000원"
+    },
+    {
+      "class":10,
+      "img":"img/millitopia.jpg",
+      "name":"밀리토피아 호텔",
+      "located":"한국,",
+      "seoul":"성남 위례",
+      "price":"141,120원",
+      "price_sale":"144,000원"
+    },
+    {
+      "class":11,
+      "name":"Alexander lnn",
+      "usa":"미국",
+      "area":"Auckland",
+      "price":"153,114원",
+      "price_sale":"156,238원"
+    },
+    {
+      "class":12,
+      "img":"img/PrinceSmartInn.jpg",
+      "name":"Prince Smart Inn",
+      "japan":"일본",
+      "area":"Hakata",
+      "price":"153,153원",
+      "price_sale":"156,270원"
+    }
+  ]
+}
