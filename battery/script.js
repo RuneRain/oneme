@@ -41,7 +41,7 @@ function updateChargingInfo(){
 
     if(parseInt(battery.dischargingTime)){
       let hr = parseInt(battery.dischargingTime/3600)
-      let min = parseInt(battery.dischargingTime/60 -hr*60)
+      let min = parseInt(battery.dischargingTime/60 -hr/60)
       chargingTimeRef.innerText =`${hr}hr ${min} mins remaining`
     }
   }
