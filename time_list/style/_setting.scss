@@ -1,0 +1,21 @@
+.menu {
+  position: relative;
+  top: 180px;
+  width: 100%;
+  box-sizing: border-box;
+
+  & > div {
+    width:80%;
+    padding: 1em 0.5em;
+    transform:translate(10%,10%);
+    margin-bottom:1.5em;
+    border-radius: 10px;
+    background: $mainColor;
+    color: $AccentColor;
+    text-align: center;
+    font-weight: bold;
+    span:first-child {
+      margin-right: 0.5em;
+    }
+  }
+}

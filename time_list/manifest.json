@@ -1,0 +1,20 @@
+{
+  "short_name":"TimeList",
+  "name":"TimeList",
+  "background_color":"#fff4f4",
+  "icons":[
+  {
+    "src":"img/192x.png",
+    "sizes":"192x192",
+    "type":"image/png"
+  },{
+    "src":"img/512x.png",
+    "sizes":"512x512",
+    "type":"image/png"
+    }
+  ],
+  "start_url":"./",
+  "display":"standalone",
+  "theme_color":"#bc7373",
+  "discription":"알람과 투두를 동시에, 어느 기기에서든 호환 가능. 시간과 일정도 그룹으로 나눠서 관리할 수 있어요."
+}

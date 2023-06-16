@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Time List</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="manifest" href="manifest.json" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lemonada&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuidv4.min.js"></script>
+    <script defer src="js/script.js"></script>
+    <!-- 아이콘이랑 링크들 이래저래 붙여넣기 해야함. js도 안 붙여넣어져있음-->
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="header">
+        <div class="top_menu">
+          <h1>Time List</h1>
+          <button class="dark_mode"><i class="fa-solid fa-moon"></i></button>
+        </div>
+      </div>
+      <nav>
+        <div class="plus_wrap">
+          <div class="plus">
+            <div class="edit_set">
+              <button class="folder">폴더명 변경</button>
+              <button class="set_form_open">일정 추가</button>
+            </div>
+            <button class="plus_button">
+              <i class="fa-solid fa-circle-plus"></i>
+            </button>
+            <button class="plus_button_close">
+              <i class="fa-regular fa-circle-xmark"></i>
+            </button>
+          </div>
+        </div>
+        <div class="icon_wrap">
+          <div class="icon home ative">
+            <a href="index.html"><i class="fa-solid fa-house"></i></a>
+          </div>
+          <div class="search">
+            <a href="search.html"
+              ><i class="fa-solid fa-magnifying-glass"></i
+            ></a>
+          </div>
+          <div class="icon user"><i class="fa-solid fa-user"></i></div>
+          <div class="icon setting">
+            <a href="setting.html"><i class="fa-solid fa-gear"></i></a>
+          </div>
+        </div>
+      </nav>
+      <div class="content">
+        <form class="set_form" style="display: none">
+          <h3 class="title">시간</h3>
+          <h3 class="current"></h3>
+          <h3 class="time">01</h3>
+          <div class="timer">
+            <div class="column">
+              <select class="hour">
+                <option value="Hour" selected hidden>Hour</option>
+              </select>
+            </div>
+            <div class="column">
+              <select class="minute">
+                <option value="Minute" selected hidden>Minute</option>
+              </select>
+            </div>
+            <div class="column">
+              <select class="ampm">
+                <option value="AM/PM" selected hidden>AM/PM</option>
+              </select>
+            </div>
+          </div>
+          <div class="catagory_info">
+            <h3 class="title">카테고리</h3>
+            <select>
+              <option value="catagory">카테고리</option>
+            </select>
+          </div>
+          <div class="todo_submit">
+            <h3 class="title">메모</h3>
+            <input type="text" required />
+            <button type="submit">등록</button>
+          </div>
+        </form>
+        <div class="white_mode"></div>
+        <div class="famous_saying">
+          <span>섣불리 예상하지 마라. 특히 미래에 대해서는</span>
+          <p>- 케이시 스텐겔</p>
+        </div>
+        <div class="todolist">
+          <div id="todo" class="catagory">
+            <span class="todo_title">오늘 해야할 일</span>
+            <div class="list">
+              <div class="checkbox">
+                <input type="checkbox" />
+              </div>
+              <div class="info">
+                <p class="clock">pm 10:00</p>
+                <span class="todo_text">집에서 개인공부하기</span>
+                <span class="edit">
+                  <i class="fa-regular fa-pen-to-square"></i>
+                </span>
+              </div>
+              <div class="deleted">
+                <span>
+                  <i class="fa-regular fa-square-minus"></i>
+                </span>
+                <!--<i class="fa-solid fa-eraser"></i>-->
+                <!--<i class="fa-solid fa-trash"></i>-->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<!-- sass --watch style/main.scss:css/style.css
+
+@mixin box($position: relative, $top: 150px, $padding: 0.5em) {
+  position: $position;
+  top: $top;
+  left: 5%;
+  right: 5%;
+  border-radius: 10px;
+  padding: $padding;
+}
+
+
+const activeAlarms = document.querySelector(".activeAlarms");
+//투두 만들어주는 곳
+const setAlarm = document.getElementById("todo_submit > button");
+//투두추가버튼
+
+
+//투두 설정
+const form = document.querySelector(".set_form"),
+  boxes = document.querySelectorAll(".catagory");
+
+let to, from;
+
+const createTodo = (e) => {
+  e.preventDefault();
+};
+
+//투두 생성(시간이랑 카테고리부분 추가해줘야 함)
+const input = document.querySelector(".todo_submit > input");
+const id = uuidv4();
+const text = input.value; //입력한대로 console창에 입력됨.
+-->

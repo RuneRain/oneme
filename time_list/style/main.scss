@@ -1,0 +1,158 @@
+@import "_mixvaryables";
+@import "_setting";
+@import "_form";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  .top_menu {
+    background: $AccentColor2;
+    box-shadow: 0 5px 10px rgba(188, 115, 115, 0.3);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 2em 0;
+    text-align: center;
+
+    & > * {
+      display: inline-block;
+      color: $AccentColor;
+    }
+
+    h1 {
+      font: {
+        size: 2.5em;
+        /*family:*/
+      }
+    }
+    button {
+      margin-left: 10px;
+      vertical-align: top;
+    }
+  } //top_menu
+} //header
+
+nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  z-index: 100;
+
+  .plus_wrap {
+    .plus {
+      float: right;
+      margin-bottom: 5%;
+      margin-right: 5%;
+      .edit_set {
+        display: none;
+        width: 100px;
+        font-weight: bold;
+        & > button {
+          display: block;
+          padding: 0.5em;
+          background: $mainColor;
+          border-radius: 10px;
+          margin-bottom: 1.5em;
+        }
+      }
+      & > button {
+        font-size: 40px;
+        color: $AccentColor;
+      }
+
+      &::after {
+        display: block;
+        content: "";
+        clear: both;
+      }
+      .plus_button_close {
+        display: none;
+      }
+    } //plus
+  }
+  .icon_wrap {
+    left: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.5em;
+    color: #fff;
+    font-size: 30px;
+    background: $AccentColor;
+
+    & > .icon:hover,
+    & > .icon:active {
+      color: #000;
+    }
+  }
+}
+
+.content {
+  width: 100%;
+  min-width: 390px;
+  box-sizing: border-box;
+
+  .famous_saying {
+    position: relative;
+    top: 180px;
+    width: 90%;
+    transform: translate(5%, 5%);
+    padding: 1em 0;
+    margin: 1em 0;
+    border-radius: 10px;
+    background: $mainColor;
+    color: $AccentColor;
+    line-height: 1.5em;
+    text-align: center;
+  }
+
+  .todolist {
+    position: relative;
+    top: 180px;
+    width: 90%;
+    transform: translate(5%, 5%);
+
+    .catagory {
+      padding: 1em;
+      border-radius: 10px;
+      background: $AccentColor2;
+
+      .todo_title {
+        display: block;
+        padding: 0.5em;
+        font-weight: bold;
+        margin-bottom: 1em;
+      }
+      .list {
+        display: flex;
+        justify-content: space-around;
+        padding: 0.5em 0;
+        align-items: center;
+        border-radius: 10px;
+        background: $mainColor;
+        border: 1px solid $AccentColor;
+
+        input[type="checkbox"] {
+          width: 1.3em;
+          height: 1.3em;
+          accent-color: #bc7373;
+        }
+
+        .info {
+          padding-left: 1em;
+          line-height: 1.5em;
+        }
+
+        .deleted span {
+          color: #bc7373;
+          font-size: 1.5em;
+        }
+      }
+    }
+  }
+}
