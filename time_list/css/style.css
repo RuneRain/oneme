@@ -23,7 +23,8 @@ button {
   border-radius: 10px;
 }
 
-option, input {
+option,
+input {
   background: none;
   outline: none;
   border-radius: 10px;
@@ -63,6 +64,21 @@ $pc:'(min-width:1201px)';
 }
 .menu > div span:first-child {
   margin-right: 0.5em;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.search input {
+  border: none;
+  font-size: 2em;
+  width: 90%;
+  background: #fff;
+}
+.search span {
+  margin-right: 3%;
 }
 
 form {
@@ -150,8 +166,9 @@ form .title {
   position: fixed;
   top: 0;
   width: 100%;
-  padding: 2em 0;
+  padding: 1em 0;
   text-align: center;
+  z-index: 100;
 }
 .header .top_menu > * {
   display: inline-block;
@@ -213,46 +230,60 @@ nav .icon_wrap {
   font-size: 30px;
   background: #bc7373;
 }
-nav .icon_wrap > .icon:hover, nav .icon_wrap > .icon:active {
+nav .icon_wrap > .icon:hover,
+nav .icon_wrap .active {
   color: #000;
 }
 
 .content {
   width: 100%;
-  min-width: 390px;
   box-sizing: border-box;
 }
-.content .famous_saying {
+@media (min-width:768px) and (max-width:1200px) {
+  .content {
+    max-width: 768px;
+    margin: auto;
+  }
+}
+@media (min-width:1201px) {
+  .content {
+    max-width: 900px;
+    margin: auto;
+  }
+}
+.content .message {
   position: relative;
-  top: 180px;
+  top: 130px;
   width: 90%;
   transform: translate(5%, 5%);
   padding: 1em 0;
   margin: 1em 0;
+  line-height: 2em;
   border-radius: 10px;
   background: #ffd0d0;
   color: #bc7373;
   line-height: 1.5em;
   text-align: center;
 }
-.content .todolist {
+.content .todolist_wrap {
   position: relative;
-  top: 180px;
+  top: 140px;
   width: 90%;
   transform: translate(5%, 5%);
 }
-.content .todolist .catagory {
+.content .todolist_wrap .catagory {
   padding: 1em;
   border-radius: 10px;
   background: #fcdadf;
+  margin-bottom: 1.5em;
 }
-.content .todolist .catagory .todo_title {
+.content .todolist_wrap .catagory .todo_title {
   display: block;
   padding: 0.5em;
   font-weight: bold;
   margin-bottom: 1em;
 }
-.content .todolist .catagory .list {
+.content .todolist_wrap .catagory .todolist {
   display: flex;
   justify-content: space-around;
   padding: 0.5em 0;
@@ -261,16 +292,20 @@ nav .icon_wrap > .icon:hover, nav .icon_wrap > .icon:active {
   background: #ffd0d0;
   border: 1px solid #bc7373;
 }
-.content .todolist .catagory .list input[type=checkbox] {
+.content .todolist_wrap .catagory .todolist input[type=checkbox] {
   width: 1.3em;
   height: 1.3em;
   accent-color: #bc7373;
 }
-.content .todolist .catagory .list .info {
+.content .todolist_wrap .catagory .todolist input[type=checkbox].checked {
+  color: #555;
+  text-decoration: line-through;
+}
+.content .todolist_wrap .catagory .todolist .info {
   padding-left: 1em;
   line-height: 1.5em;
 }
-.content .todolist .catagory .list .delete span {
+.content .todolist_wrap .catagory .todolist .deleted span {
   color: #bc7373;
   font-size: 1.5em;
 }
