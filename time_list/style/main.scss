@@ -14,8 +14,9 @@
     position: fixed;
     top: 0;
     width: 100%;
-    padding: 2em 0;
+    padding: 1em 0;
     text-align: center;
+    z-index: 100;
 
     & > * {
       display: inline-block;
@@ -85,8 +86,9 @@ nav {
     font-size: 30px;
     background: $AccentColor;
 
+
     & > .icon:hover,
-    & > .icon:active {
+    .active {
       color: #000;
     }
   }
@@ -94,16 +96,25 @@ nav {
 
 .content {
   width: 100%;
-  min-width: 390px;
   box-sizing: border-box;
 
-  .famous_saying {
+  @media #{$tablet} {
+    max-width: 768px;
+    margin: auto;
+  }
+  @media #{$pc} {
+    max-width: 900px;
+    margin: auto;
+  }
+
+  .message {
     position: relative;
-    top: 180px;
+    top: 130px;
     width: 90%;
     transform: translate(5%, 5%);
     padding: 1em 0;
     margin: 1em 0;
+    line-height: 2em;
     border-radius: 10px;
     background: $mainColor;
     color: $AccentColor;
@@ -111,9 +122,9 @@ nav {
     text-align: center;
   }
 
-  .todolist {
+  .todolist_wrap {
     position: relative;
-    top: 180px;
+    top: 140px;
     width: 90%;
     transform: translate(5%, 5%);
 
@@ -121,6 +132,7 @@ nav {
       padding: 1em;
       border-radius: 10px;
       background: $AccentColor2;
+      margin-bottom: 1.5em;
 
       .todo_title {
         display: block;
@@ -128,7 +140,7 @@ nav {
         font-weight: bold;
         margin-bottom: 1em;
       }
-      .list {
+      .todolist {
         display: flex;
         justify-content: space-around;
         padding: 0.5em 0;
@@ -141,6 +153,10 @@ nav {
           width: 1.3em;
           height: 1.3em;
           accent-color: #bc7373;
+        }
+        input[type="checkbox"].checked {
+          color: #555;
+          text-decoration: line-through;
         }
 
         .info {
