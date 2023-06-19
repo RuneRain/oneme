@@ -19,3 +19,18 @@
     }
   }
 }
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  input {
+    border: none;
+    font-size: 2em;
+    width:90%;
+    background: #fff;
+  }
+  span {
+    margin-right: 3%;
+  }
+}
