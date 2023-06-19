@@ -29,118 +29,135 @@ whiteMode.addEventListener("click", (e) => {
   whiteMode.style.display = "none";
 });
 
-// 알람 설정
-const currentTime = document.querySelector(".current");
-//현재시간 담고 있는 곳
-const time = document.querySelector(".time");
-//선택한 시간을 담는 곳
+const welcomeMessage = (day) => {
+  const dayMessage = document.querySelector(".message");
+  const welcomeMessageH2 = document.createElement("h3");
+  welcomeMessageH2.innerHTML = day;
+  dayMessage.appendChild(welcomeMessageH2);
+};
 
-const content = document.querySelector(".timer");
-//시간 만드는걸 담고있는 div
-const selectMenu = document.querySelectorAll("select");
-//시간,분,apm option을 담고있는 select
-
-let Hour = document.getElementsByTagName("select")[0].value;
-let Minute = document.getElementsByTagName("select")[1].value;
-let Ampm = document.getElementsByTagName("select")[2].value;
-let catagory = document.getElementsByTagName("select")[3].value;
-//선생님께 select랑 input에 있는 거 가져오는 법 물어보기
-
-time.innerHTML = `${Hour}:${Minute}:${Ampm}`;
-
-let alarmTime;
-let alarmsArray = [];
-
-//input 안의 내용 생성
-for (let i = 12; i > 0; i--) {
-  i = i < 10 ? "0" + i : i;
-  let option = `<option value="${i}">${i}</option>`;
-  selectMenu[0].firstElementChild.insertAdjacentHTML("afterend", option);
+let dayName = new Date();
+switch (dayName.getDay()) {
+  case 0:
+    welcomeMessage(`일요일,<br>주말 마무리를 잘해보아요~`);
+    break;
+  case 1:
+    welcomeMessage(`월요일,<br>이번주도 열심히 달려보아요!`);
+    break;
+  case 2:
+    welcomeMessage(`화요일,<br>오늘 하루도 힘내요!`);
+    break;
+  case 3:
+    welcomeMessage(`수요일,<br>벌써 이번주의 반을 왔어요!`);
+    break;
+  case 4:
+    welcomeMessage(`목요일,<br>하루만 더 파이팅이에요!`);
+    break;
+  case 5:
+    welcomeMessage(`금요일, 내일이면 주말이에요!`);
+    break;
+  case 6:
+    welcomeMessage(`토요일, 주말이에요!`);
+    break;
+  default:
+    alert("");
 }
 
-for (let i = 59; i >= 0; i--) {
+
+let alarmListArr = [];
+
+let breakfastList = [];
+let lunchList = [];
+let dinnerList = [];
+
+let lists = {
+  breakfast: breakfastList,
+  lunch: lunchList,
+  dinner: dinnerList,
+};
+
+const selectMenu = document.querySelectorAll("select");
+const setAlarmBtn = document.querySelector(".set_alarm");
+
+// input 안의 내용 생성
+for (let i = 2; i > 0; i--) {
+  let ampm = i == 1 ? "AM" : "PM";
+  let option = `<option value="${ampm}">${ampm}</option>`;
+  selectMenu[0].firstElementChild.insertAdjacentHTML("afterend", option);
+}
+for (let i = 12; i > 0; i--) {
   i = i < 10 ? "0" + i : i;
   let option = `<option value="${i}">${i}</option>`;
   selectMenu[1].firstElementChild.insertAdjacentHTML("afterend", option);
 }
-
-for (let i = 2; i > 0; i--) {
-  let ampm = i == 1 ? "AM" : "PM";
-  let option = `<option value="${ampm}">${ampm}</option>`;
+for (let i = 59; i >= 0; i--) {
+  i = i < 10 ? "0" + i : i;
+  let option = `<option value="${i}">${i}</option>`;
   selectMenu[2].firstElementChild.insertAdjacentHTML("afterend", option);
 }
 
-//시간 설정 관련
-setInterval(() => {
-  //현재 시간 불러오는 부분
-  let date = new Date(),
-    h = date.getHours(),
-    m = date.getMinutes(),
-    s = date.getSeconds(),
-    ampm = "AM";
+// todo 생성
+setAlarmBtn.addEventListener("click",createTodo);
 
-  if (h >= 12) {
-    h = h - 12;
-    ampm = "PM";
-  }
-  //if hour value is 0, set this value to 12
-  h = h == 0 ? (h = 12) : h;
-  //adding 0 before hr, min, sec if this value is less than 10
-  h = h < 10 ? "0" + h : h;
-  m = m < 10 ? "0" + m : m;
-  s = s < 10 ? "0" + s : s;
-  currentTime.innerHTML = `${h}:${m}:${s} ${ampm}`;
-  //여기까지가 현재시간 설정.
+function createTodo(e) {
+  e.preventDefault();
+  setForm.style.display = "none";
+  whiteMode.style.display = "none";
 
-  if (alarmTime == `${h}:${m} ${ampm}`) {
-    ringtone.play();
-    ringtone.loop = true;
-  }
-}, 1000);
+  const categoryList = `${selectMenu[3].value}`;
+  const matchingElement = document.getElementById(categoryList);
+  const todolist = document.createElement("div");
+  todolist.classList.add("todolist");
+  
+  const clock = document.createElement("div");
+  clock.classList.add("clock");
 
-/*
-const deleteBtn = document.querySelector(".deleted");
+  let time = `${selectMenu[0].value} : ${selectMenu[1].value} : ${selectMenu[2].value}`;
+  let span = document.createElement("span");
+  span.innerHTML = time;
+  clock.appendChild(span);
+  
+  const text = document.querySelector(".todo_submit input").value;
+  const textDiv = document.createElement("div");
+  textDiv.classList.add("todo_text");
+  textDiv.innerHTML = text;
+  
+  let checkDiv = document.createElement("div");
+  let checkbox = document.createElement("input");
+  checkbox.type = "checkbox"
+  checkDiv.appendChild(checkbox);
 
-deleteBtn.addEventListener("click", removeItem);
+  let editDiv = document.createElement("div");
+  editDiv.innerHTML ='<i class="fa-regular fa-pen-to-square"></i>'
 
-//삭제해주는 함수 지정
-const removeItem = () => {
-  const lists = document.querySelector(".list");
-  lists.forEach((lists) => {
-    lists.remove();
-  });
-};
-
-function createTodo(todoData) {
-  //선택한 카테고리 내에 들어가도록 하는 방법??
-  //클릭한 카테고리의 이름을 알아온다> 그 카테고리에 넣는다
-  //input에 입력한 글자 알아와야하고, 그걸 변수로 지정해서 넣고.
-  //선택했던 시간 가져와서 담아주는 것도 해야함
-  //li를 만드는 거 하나 생성했으면 반복하는 것도 해줘야 하나..?
-
-  const list = document.createElement("div");
-
-  let createTodoList = `
-  <div class="checkbox">
-    <input type="checkbox" />
-  </div>
-  <div class="info">
-    <p class="clock">${todoData}</p>
-    <span>${todoData}</span>
-    <span class="edit">
-      <i class="fa-regular fa-pen-to-square"></i>
-    </span>
-  </div>
-  <div class="deleted">
-    <span>
-      <i class="fa-regular fa-square-minus"></i>
-    </span>
-  </div>
-`;
-
-  list.className = "list";
-  list.innerHTML = createTodo;
-  ??.append(hotel);
+  todolist.appendChild(checkDiv);
+  todolist.appendChild(clock);
+  todolist.appendChild(textDiv);
+  todolist.appendChild(editDiv);
+  matchingElement.appendChild(todolist);
+  
+  saveData();
 }
 
-*/
+function saveData() {
+  const listContainer = document.getElementById("list-container");
+  localStorage.setItem("data", listContainer.innerHTML);
+}
+
+function showTask() {
+  const listContainer = document.getElementById("list-container");
+  listContainer.innerHTML = localStorage.getItem("data");
+}
+showTask();
+
+const clock = document.getElementById('clock');
+
+checkbox.addEventListener('click', function() {
+  if (checkbox.checked) {
+    clock.style.color = '#555';
+    clock.style.textDecoration = 'line-through';
+  } else {
+    clock.style.color = '';
+    clock.style.textDecoration = '';
+  }
+});
