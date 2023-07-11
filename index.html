@@ -1,129 +1,326 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>09_hotelLago</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Khand:wght@300;400;500&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Gothic+A1:wght@300;400;500&family=Zen+Kaku+Gothic+Antique:wght@300;400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/basic.css">
-    <script src="js/prefixfree.min.js"></script>
-    <!-- 폰트 사이트 줄이는거 재체크 -->
-</head>
-<body>
-    <header>
-        <h1>Lago di Garda</h1>
-        <nav class="gnb">
-            <ul>
-                <li>
-                    <a href="#"><i class="fa-solid fa-hotel fa-fw"></i><span>Hotel</span></a>
-                </li>
-                <li>
-                    <a href="#"><i class="fa-solid fa-utensils fa-fw"></i><span>Restaurant</span></a>
-                </li>
-                <li>
-                    <a href="#"><i class="fa-solid fa-champagne-glasses fa-fw"></i><span>Party</span></a>
-                </li>
-                <li>
-                    <a href="#"><i class="fa-solid fa-plane-departure fa-fw"></i><span>Tourist</span></a>
-                </li>
-                <li>
-                    <a href="#">
-                    <i class="fa-solid fa-umbrella-beach fa-fw"></i><span>Beach</span></a>
-                </li>
-                <li>
-                    <a href="#"><i class="fa-solid fa-spa fa-fw"></i><span>Spa</span> </a>
-                </li>
-            </ul>
-        </nav>
-        <div class="sns">
-            <a href="#">About</a>
-            <a href="#">Connect</a><br>
-            <a href="#" class="sns_icon"><i class="fa-brands fa-twitter fa-fw"></i></a>
-            <a href="#" class="sns_icon"><i class="fa-brands fa-square-facebook fa-fw"></i></a>
-            <a href="#" class="sns_icon"><i class="fa-brands fa-instagram fa-fw"></i></a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OneMe's Play</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <script defer src="js/main.js"></script>
+  </head>
+  <body>
+    <header class="on">
+      <div class="header_wrap">
+        <div class="nav_wrap">
+          <div class="logo">
+            <h1>OneMe's Play</h1>
+          </div>
+          <ul class="main_nav">
+            <li><a href="#">소개</a></li>
+            <li><a href="#library">라이브러리</a></li>
+            <li><a href="#individual">개인작업</a></li>
+          </ul>
         </div>
+        <div class="side_nav">
+          <div class="mail">
+            <a href="mailto:oneme12@naver.com">
+              <i class="fa-solid fa-envelope"></i>
+            </a>
+          </div>
+          <div class="github">
+            <a href=""><i class="fa-brands fa-github-alt"></i></a>
+          </div>
+        </div>
+      </div>
     </header>
-    <nav id="util">  
-        <a href="#">Make a reservation</a>
-        <a href="#">English <i class="fa-solid fa-angles-down fa-fw"></i></a>
-        <a href="#">Log in or Registar</a>
-        <a href="#">Request</a>
-    </nav>
-    <section>
-        <article class="article1">
-            <div class="bg">
-            <span>Maldives</span>
+    <div class="content">
+      <div id="guide">
+        <div class="tag_icon">
+          <button>나의 성격</button>
+          <button># 친절한</button>
+          <button># 배려하는</button>
+          <button># 활동적인</button>
+        </div>
+        <div class="pr_slider_wrap">
+          <div class="pr_slider">
+            <ul>
+              <li>
+                <span><img src="" alt="" /></span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="skil_wrap">
+          <h3>스킬</h3>
+          <div class="skils">
+            <div class="skil">
+              <span class="number">1</span>
+              <div class="icon m-y">
+                <img src="img/html5_icon.svg" alt="html5_icon" />
+              </div>
+              <div class="skil_info">
+                <span class="skil_title">Html</span>
+                <span class="skil_discription">★ 4.0</span>
+              </div>
             </div>
-        </article>
-        <article class="article2">
-            <div class="text">
-            <i class="fa-solid fa-globe fa-flip"></i>
-            <strong>A Whole New World</strong>
-            <span>I can show you the world. Shining Shimmering Splended.
-                Tell me when you decide let me be in your heart.</span>
+            <div class="skil">
+              <span class="number">2</span>
+              <div class="icon m-y">
+                <img src="img/css3_icon.svg" alt="css3_icon" />
+              </div>
+              <div class="skil_info">
+                <span class="skil_title">Css</span>
+                <span class="skil_discription">★ 4.0</span>
+              </div>
             </div>
-        </article>
-        <article class="article3">
-            <div class="text">
-            <i class="fa-solid fa-bell fa-shake"></i>
-            <strong>Reservation</strong>
+            <div class="skil">
+              <span class="number">3</span>
+              <div class="img_icon">
+                <img src="img/java_rounded_icon.svg" alt="java_icon" />
+              </div>
+              <div class="skil_info">
+                <span class="skil_title">Java</span>
+                <span class="skil_discription">★ 3.0</span>
+              </div>
             </div>
-        </article>
-        <article class="article4">
-            <div class="bg">
-            <span>Suite</span>
+            <div class="skil">
+              <span class="number">4</span>
+              <div class="icon">
+                <img src="img/react_icon.svg" alt="react_icon" />
+              </div>
+              <div class="skil_info">
+                <span class="skil_title">React</span>
+                <span class="skil_discription">★ 2.0</span>
+              </div>
             </div>
-        </article>
-        <article class="article5">
-            <div class="bg">
-            <span>surt</span>
+            <div class="skil">
+              <span class="number">5</span>
+              <div class="icon">
+                <img src="img/vue_icon.svg" alt="vue_icon" />
+              </div>
+              <div class="skil_info">
+                <span class="skil_title">Vue</span>
+                <span class="skil_discription">★ 3.0</span>
+              </div>
             </div>
-        </article>
-        <article class="article6">
-            <div class="text">
-            <i class="fa-solid fa-fan fa-spin"></i>
-            <strong>A Dazzling Place</strong>
-            <span>I can show you the world. Shining Shimmering Splended. Tell me when you decide .</span>
+            <div class="skil">
+              <span class="number">6</span>
+              <div class="img_icon">
+                <img
+                  src="img/bootstrap_rounded_icon.svg"
+                  alt="bootstrap_rounded_icon"
+                />
+              </div>
+              <div class="skil_info">
+                <span class="skil_title">Bootstrap</span>
+                <span class="skil_discription">★ 3.0</span>
+              </div>
             </div>
-        </article>
-        <article class="article7">
-            <div class="bg">
-            <span>Sauna</span>
+            <div class="skil">
+              <span class="number">7</span>
+              <div class="img_icon">
+                <img src="img/sass_rounded_icon.svg" alt="sass_icon" />
+              </div>
+              <div class="skil_info">
+                <span class="skil_title">Sass</span>
+                <span class="skil_discription">★ 4.0</span>
+              </div>
             </div>
-        </article>
-        <article class="article8">
-            <div class="text">
-            <i class="fa-solid fa-suitcase fa-bounce"></i>
-            <strong>Hot spot</strong>
-            <span>a best place to have a vacation<br>Tell me when you</span>
+            <div class="skil">
+              <span class="number">8</span>
+              <div class="icon">
+                <img src="img/figma_icon.svg" alt="figma_icon" />
+              </div>
+              <div class="skil_info">
+                <span class="skil_title">figma</span>
+                <span class="skil_discription">★ 3.0</span>
+              </div>
             </div>
-        </article>
-        <article class="article9">
-            <div class="bg">
-            <span>Diner</span>
+            <div class="skil">
+              <span class="number">9</span>
+              <div class="img_icon">
+                <img
+                  src="img/illustrator_rounded_icon.svg"
+                  alt="illustrator_icon"
+                />
+              </div>
+              <div class="skil_info">
+                <span class="skil_title">Illustrator</span>
+                <span class="skil_discription">★ 4.0</span>
+              </div>
             </div>
-        </article>
-        <article class="article10">
-            <div class="bg">
-            <span>Spa</span>
+          </div>
+        </div>
+        <div class="experience">
+          <h3>근무 경험</h3>
+          <div class="skils">
+            <div class="skil">
+              <span class="number">1</span>
+              <div class="icon">
+                <img src="img/code_design_icon.svg" alt="code_design_icon" />
+              </div>
+              <div class="skil_info experience_info">
+                <span class="skil_title">프론트엔드</span>
+                <span class="skil_discription">프로젝트(React, Vue) 웹 & 앱<br> SW 개발</span>
+              </div>
             </div>
-        </article>
-        <article class="article11">
-            <div class="text">
-            <i class="fa-solid fa-fire-flame-curved fa-flip"></i>
-            <strong>Open Space</strong>
-            <span>I Can show you the world</span>
+            <div class="skil">
+              <span class="number">2</span>
+              <div class="icon">
+                <img src="img/mask_icon.svg" alt="mask_icon" />
+              </div>
+              <div class="skil_info experience_info">
+                <span class="skil_title">미마 마스크</span>
+                <span class="skil_discription">검수 및 수량체크, 포장</span>
+              </div>
             </div>
-        </article>
-        <article class="article12">
-            <div class="bg">
-            <span>Tour</span>
+            <div class="skil">
+              <span class="number">3</span>
+              <div class="icon">
+                <img src="img/site_design_icon.svg" alt="site_design_icon" />
+              </div>
+              <div class="skil_info experience_info">
+                <span class="skil_title">웹디자인</span>
+                <span class="skil_discription">디지털 디자인B</span>
+              </div>
             </div>
-        </article>
-    </section>
-</body>
+          </div>
+        </div>
+      </div>
+      <div id="library">
+        <h2>라이브러리</h2>
+        <div class="library_nav">
+          <button class="all" data-filter="all">all</button>
+          <button class="html" data-filter="html">html</button>
+          <button class="react" data-filter="react">react</button>
+          <button class="vue" data-filter="vue">Vue</button>
+          <button class="bootstrap" data-filter="bootstrap">Bootstrap</button>
+        </div>
+        <div class="library_box_wrap">
+          <div class="library_box react">
+            <div class="library_info">
+              <h3>React Meals</h3>
+              <p>응용 프로그램 : html, css, jQuery.</p>
+              <div class="libary_button">
+                <button class="library_icon">
+                  <a href="https://github.com/RuneRain/meal" target="_blank">code</a>
+                </button>
+                <button class="library_icon">
+                  <a href="https://react-meal-test.netlify.app/" target="_blank">site</a>
+                </button>
+              </div>
+            </div>
+            <div class="library_img">
+              <img src="img/reactmeals.jpg" alt="" />
+            </div>
+          </div>
+          <div class="library_box bootstrap">
+            <div class="library_info">
+              <h3>제목</h3>
+              <p>응용 프로그램 : html, css, jQuery.</p>
+              <div class="libary_button">
+                <button class="library_icon">
+                  <a href="" target="_blank">code</a>
+                </button>
+                <button class="library_icon">
+                  <a href="" target="_blank">site</a>
+                </button>
+              </div>
+            </div>
+            <div class="library_img">
+              <img src="img/illustrator_rounded_icon.svg" alt="" />
+            </div>
+          </div>
+          <div class="library_box sass">
+            <div class="library_info">
+              <h3>제목</h3>
+              <p>응용 프로그램 : html, css, jQuery.</p>
+              <div class="libary_button">
+                <button class="library_icon">
+                  <a href="" target="_blank">code</a>
+                </button>
+                <button class="library_icon">
+                  <a href="" target="_blank">site</a>
+                </button>
+              </div>
+            </div>
+            <div class="library_img">
+              <img src="img/illustrator_rounded_icon.svg" alt="" />
+            </div>
+          </div>
+          <div class="library_box html">
+            <div class="library_info">
+              <h3>설빙</h3>
+              <p>응용 프로그램 : html, css, jQuery.</p>
+              <div class="libary_button">
+                <button class="library_icon">
+                  <a href="https://runerain.github.io/oneme/sulbing/" target="_blank">site</a>
+                </button>
+                <button class="library_icon">
+                  <a href="https://github.com/RuneRain/oneme/tree/main/sulbing" target="_blank" >code</a>
+                </button>
+                <button class="library_icon">
+                  <a href="https://runerain.github.io/oneme/sulbing/menu/index.html" target="_blank">sub site</a>
+                </button>
+                <button class="library_icon">
+                  <a href="https://github.com/RuneRain/oneme/tree/main/sulbing/menu" target="_blank">sub site code</a>
+                </button>
+              </div>
+            </div>
+            <div class="library_img">
+              <img src="img/sulbing.jpg" alt="sulbing img" />
+            </div>
+          </div>
+          <div class="library_box sass">
+            <div class="library_info">
+              <h3>제목</h3>
+              <p>응용 프로그램 : html, css, jQuery.</p>
+              <div class="libary_button">
+                <button class="library_icon">
+                  <a href="" target="_blank">code</a>
+                </button>
+                <button class="library_icon">
+                  <a href="" target="_blank">site</a>
+                </button>
+              </div>
+            </div>
+            <div class="library_img">
+              <img src="img/illustrator_rounded_icon.svg" alt="" />
+            </div>
+          </div>
+          <div class="library_box sass">
+            <div class="library_info">
+              <h3>제목</h3>
+              <p>응용 프로그램 : html, css, jQuery.</p>
+              <div class="libary_button">
+                <button class="library_icon">
+                  <a href="" target="_blank">code</a>
+                </button>
+                <button class="library_icon">
+                  <a href="" target="_blank">site</a>
+                </button>
+              </div>
+            </div>
+            <div class="library_img">
+              <img src="img/illustrator_rounded_icon.svg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="individual">
+        <h2>개인작업</h2>
+      </div>
+      <footer>
+        <address>
+          <span>
+            @2023 prontend portfollio
+          </span>
+        </address>
+      </footer>
+    </div>
+  </body>
 </html>
