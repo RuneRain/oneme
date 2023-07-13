@@ -14,7 +14,7 @@ body {font-family:PoiretOne, Verdana, Geneva, Tahoma, sans-serif; color:#333;}
 a {color:inherit;}
 ul::after {display:block; content:''; clear:both;}
 
-/* 레이아웃 */
+/* layout */
 header {position:fixed; left:0; top:0; height:100%; width:15%;}
 #util {position:relative; background:#111; width:85%; height:35px; margin-left:15%;}
 section {width:85%; margin-left:-15%; transition:0.3s;}
@@ -23,9 +23,6 @@ section {width:85%; margin-left:-15%; transition:0.3s;}
 header h1 {position:absolute; top:10vh; left:50%; transform:translate(-50%); width:180px; height:136px; background:url('../img/logo1.png') no-repeat center center / contain; text-indent:-999px;}
 
 .gnb {position:absolute; top:30vh; left:50%; margin-left:-60px;}
-/* 동일하게 줬는데도 텍스트가 길어서 아래로 내려가는 경우,
-left:50%; transform:translate(-50%);이 아니라,
-left:25%; 또는 margin으로 지정. */
 .gnb li {padding:8px 0;}
 .gnb a {font-size:18px; font-weight:bold; color:#666; transition:.3s; text-transform:uppercase;}
 .gnb a:hover {color:#000;}
@@ -153,15 +150,13 @@ article .text {padding:40px 30px; transition:300ms;}
     .gnb a {font-size:14px;}
 }
 
-/* article 한줄 2개 , #util 부분이 사라짐
-모바일 중에 큰 모바일 */
+/* article 한줄 2개 , #util 부분이 사라짐 */
 @media (max-width:640px){
-    /* 레이아웃 */
+    /* layout */
     #util {display:none;}
 
     header {height:120px; padding-top:25px;}
     header h1 {position:static; width:160px; height:35px; margin:0 auto 20px;}
-    /* relative로 바꾸면, top이랑 left 없애줘야하는데. static은 none이랑 같은 상태라서 따로 안줘도 됨 */
     .gnb {position:static; text-align:center;}
     .gnb ul {display:inline-block;}
     .gnb li {padding:0 10px;}
