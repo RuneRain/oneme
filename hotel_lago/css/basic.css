@@ -1,0 +1,200 @@
+@charset "UTF-8";
+@font-face{
+    font-family:PoiretOne;
+    src:url('../font/PoiretOne-Regular.woff');
+    font-style:normal;
+    font-weight:400;
+    src:local('PoiretOne'),
+    url('../font/PoiretOne-Regular.ttf') format('truetype'),
+    url('../font/PoiretOne-Regular.woff2') format(woff2);
+}
+
+
+body {font-family:PoiretOne, Verdana, Geneva, Tahoma, sans-serif; color:#333;}
+a {color:inherit;}
+ul::after {display:block; content:''; clear:both;}
+
+/* 레이아웃 */
+header {position:fixed; left:0; top:0; height:100%; width:15%;}
+#util {position:relative; background:#111; width:85%; height:35px; margin-left:15%;}
+section {width:85%; margin-left:-15%; transition:0.3s;}
+
+/* header */
+header h1 {position:absolute; top:10vh; left:50%; transform:translate(-50%); width:180px; height:136px; background:url('../img/logo1.png') no-repeat center center / contain; text-indent:-999px;}
+
+.gnb {position:absolute; top:30vh; left:50%; margin-left:-60px;}
+/* 동일하게 줬는데도 텍스트가 길어서 아래로 내려가는 경우,
+left:50%; transform:translate(-50%);이 아니라,
+left:25%; 또는 margin으로 지정. */
+.gnb li {padding:8px 0;}
+.gnb a {font-size:18px; font-weight:bold; color:#666; transition:.3s; text-transform:uppercase;}
+.gnb a:hover {color:#000;}
+.gnb a i {margin-right:8px;}
+
+.sns {position:absolute; bottom:30px; right:50%; transform:translate(50%); text-align:center;}
+.sns a {font-family:'Khand',sans-serif; text-transform: uppercase;}
+.sns_icon {display:inline-block; width:25px; height:25px; line-height:25px; border:1px solid #000; margin-top:7px;}
+.sns a:first-child::after {display:inline-block; content:""; width:1px; height:10px; background:#666; margin:0 5px 0 10px;}
+
+/* util */
+#util a {position:absolute; color:#ddd; font-family:'Dancing Script',cursive; line-height:35px; font-size:18px; transition:0.3s;}
+#util:hover {color:#fff;}
+#util a:nth-child(1) {left:20px;}
+#util a:nth-child(2) {left:170px;}
+#util a:nth-child(3) {right:100px;}
+#util a:nth-child(4) {right:20px;}
+#util a i {font-size:12px;}
+
+
+/* section */
+article {float:left; height:260px; transition:.3s;}
+.article1 {width:60%; height:520px;}
+.article2 {width:40%;}
+.article3 {width:20%;}
+.article4 {width:20%;}
+.article5 { width:20%;}
+.article6 { width:40%;}
+.article7 { width:20%;}
+.article8 { width:20%;}
+.article9 { width:40%;}
+.article10 {width:20%;}
+.article11 {width:20%;}
+.article12 {width:20%;}
+
+article > div {position:relative; width:100%; height:100%; overflow:hidden; cursor:pointer;}
+article .bg {background-size:cover; background-position:center center;}
+
+.article1 .bg {background-image:url('../img/pic1.jpg');}
+.article4 .bg {background-image:url('../img/pic2.jpg');}
+.article5 .bg {background-image:url('../img/pic3.jpg');}
+.article7 .bg {background-image:url('../img/pic4.jpg');}
+.article9 .bg {background-image:url('../img/pic5.jpg');}
+.article10 .bg {background-image:url('../img/pic6.jpg');}
+.article12  .bg {background-image:url('../img/pic7.jpg');}
+
+.bg span {position:absolute; bottom:10px; right:10px; font-size:70px; color:#fff; text-shadow:0 0 5px rgba(0,0,0,.6); opacity:0; transform:scale(10); transition:500ms ease-in;}
+.bg:hover span {opacity:1; transform:scale(1);}
+
+.article1 .bg span {bottom:-45px; right:-10px; font-size:170px; transform:scale(1); opacity:1; font-family:'khand',sans-serif;}
+.article1 .bg:hover span {transform:rotateY(180deg); opacity:.5;}
+
+article .text {padding:40px 30px; transition:300ms;}
+.text strong {display:block; font-size:26px; color:#222; font-weight:bold;}
+.text span {font-family:'Khand',sans-serif; font-size:14px; font-weight:300;}
+.text i {position:absolute; bottom:-50px; right:0; opacity:0; color:#fff; transform:translate(200px); font-size:250px; transition:500ms ease-out;}
+.text:hover {background:skyblue;}
+.text:hover i {transform:translate(0px); opacity:.5;}
+
+.article3 {background:#c3ddee;}
+.article6 {background:#fff5bb;}
+.article11 {background:#acffba;}
+
+
+/********** 반응형 부분 **********/
+
+/* 좌측 헤더를 위로 올림 */
+@media (max-width:1600px){ 
+    header {position:relative; height:80px; width:100%;}
+    #util {width:100%; margin-left:0;}
+    section {width:100%; margin-left:0;}
+
+    header h1 {top:17px; left:20px; transform:none; width:250px; height:50px; background-image:url('../img/logo2.png');}
+
+    .gnb {top:30px; left:auto; right:200px; margin-left:0; }
+    .gnb ul{ }
+    .gnb li {float:left; padding:0 15px;}
+
+    .sns {bottom:17px; right:20px; transform:none;}
+}
+
+/* article 한줄 4개 */
+@media (max-width:1280px){
+    .gnb {right:20px;}
+    .sns {display:none;}
+
+    .article1 {width:75%;}
+    .article2 {width:25%;}
+    .article3 {width:25%;}
+    .article4 {width:25%;}
+    .article5 {width:25%;}
+    .article6 {width:50%;}
+    .article7 {width:50%;}
+    .article8 {width:25%;}
+    .article9 {width:25%;}
+    .article10 { width:50%;}
+    .article11 { width:25%;}
+    .article12 { width:25%;}
+
+}
+
+/* article 한줄 3개 */
+@media (max-width:1024px){ 
+    .gnb li {padding:0 10px;}
+    .gnb a {font-size:16px;}
+
+    .article1 {width:100%;}
+    .article2 {width:66.66%;}
+    .article3 {display:none;}
+    .article4 {width:33.33%;}
+    .article5 {width:33.33%;}
+    .article6 {width:66.66%;}
+    .article7 {display:none;}
+    .article8 {width:33.33%;}
+    .article9 {width:33.33%;}
+    .article10 {display:none;}
+    .article11 { width:33.33%;}
+    .article12 {display:none;}
+}
+
+@media (max-width:870px){
+    header h1 {top:22px; width:160px; height:35px;}
+    .gnb {right:10px;}
+    .gnb li {padding:0 5px;}
+    .gnb a {font-size:14px;}
+}
+
+/* article 한줄 2개 , #util 부분이 사라짐
+모바일 중에 큰 모바일 */
+@media (max-width:640px){
+    /* 레이아웃 */
+    #util {display:none;}
+
+    header {height:120px; padding-top:25px;}
+    header h1 {position:static; width:160px; height:35px; margin:0 auto 20px;}
+    /* relative로 바꾸면, top이랑 left 없애줘야하는데. static은 none이랑 같은 상태라서 따로 안줘도 됨 */
+    .gnb {position:static; text-align:center;}
+    .gnb ul {display:inline-block;}
+    .gnb li {padding:0 10px;}
+
+    
+    .article1 {height:300px;}
+    .article2 {width:100%;}
+    .article3 {display:none;}
+    .article4 {width:50%;}
+    .article5 {display:none;}
+    .article6 {width:50%;}
+    .article7 {width:50%;}
+    .article8 {width:50%;}
+    .article9 {width:50%;}
+    .article10 {width:50%; display:block;}
+    .article11 {width:50%;}
+    .article12 {width:50%;}
+}
+
+/* article 1개, 메뉴 중앙. 500px은 구글 최소크기 */
+@media (max-width:500px){ 
+    header {position:fixed; height:100%; padding-top:10vh; z-index:5;}
+    header h1 {width:140px; height:120px; margin:0 auto 20px; background-image: url(../img/logo1.png);}
+
+    .gnb {padding-top:10vh;}
+    .gnb li {padding: 5px 0; float:none;}
+    .gnb a {display:block; width:55vw; font-size:20px; padding:10px; border-radius:8px; background:rgba(0, 0, 0,.5); color:#fff;}
+
+    .gnb a:hover {background:rgba(0, 0, 0,.9); transform:scale(1.1); color:#fff;}
+
+    article {display:none;}
+    .article1 {position:fixed; display:block; width:100%; height:100%;}
+    .article10 {display:none;}
+
+    .article1 .bg span {bottom:-10px; right:0; font-size:100px; transform:scale(1); opacity:.3;}
+}
