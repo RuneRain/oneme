@@ -13,7 +13,7 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
-    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <script defer src="js/main.js"></script>
   </head>
   <body>
@@ -38,8 +38,8 @@
     </div>
     <div class="header">
       <ul class="main_nav">
-        <li><a href="#about">about</a></li>
-        <li><a href="#project">project</a></li>
+        <li><a href="#about">소개</a></li>
+        <li><a href="#project">프로젝트</a></li>
       </ul>
     </div>
     <div class="sticker">
@@ -49,45 +49,10 @@
             <h1><a href="#">OneMe's Play</a></h1>
           </div>
           <ul class="main_nav">
-            <li><a href="#about">about</a></li>
-            <li><a href="#project">project</a></li>
+            <li><a href="#about">소개</a></li>
+            <li><a href="#project">프로젝트</a></li>
           </ul>
         </div>
-        <div class="side_nav">
-          <div class="about_me">
-            <div class="about_me_icon">
-              <i class="fa-regular fa-question"></i>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="profile_wrap">
-        <div class="profile">
-          <div class="profile_img">
-            <img src="img/" alt="">
-          </div>
-          <div class="profile_info">
-            <span class="profile_name">이원미</span>
-            <p>
-              <a href="mailto:minstrel.rune@gmail.com">
-                minstrel.rune@gmail.com
-              </a>
-            </p>
-            <span class="profile_tel">
-              <a href="tel:01073306548">
-                <i class="fa-solid fa-mobile-screen"></i>
-                01073306548
-              </a>
-            </span>
-          </div>
-        </div>
-        <hr>
-        <span class="github">
-          <a href="https://github.com/RuneRain/oneme" target="_blank">
-            <i class="fa-brands fa-github"></i>
-            깃허브
-          </a>
-        </span>
       </div>
     </div>
     <div class="content">
@@ -96,24 +61,24 @@
           <button># 나의 성격</button>
           <button># 친절한</button>
           <button># 활동적인</button>
-          <button># 노력하는</button>
+          <button># 컨셉에 충실한</button>
         </div>
         <div class="banner_wrap">
           <div class="banner_info">
-            <h2>" 사용자의 시선으로, 기획과 작업은 동료들과 함께. "</h2>
+            <h2>" 사용자의 시선으로, <span class="h2_m">기획과 작업은 </span><span class="h2_m">동료들과 함께. "</span></h2>
             <span>안녕하세요, 신입 프론트엔드 개발자 이원미입니다.</span>
-            <p>
+            <button>
               <a href="mailto:minstrel.rune@gmail.com">
                 <i class="fa-regular fa-envelope"></i>
                 minstrel.rune@gmail.com
               </a>
-            </p>
-            <span>
+            </button>
+            <button>
               <a href="tel:01073306548">
                 <i class="fa-solid fa-mobile-screen"></i>
-                01073306548
+                010-7330-6548
               </a>
-            </span>
+            </button>
           </div>
         </div>
         <div class="skil_wrap animate__animated animate__fadeInUp">
@@ -178,7 +143,7 @@
                 />
               </div>
               <div class="skil_info">
-                <span class="skil_title">Bootstrap</span>
+                <span class="skil_title">bootstrap</span>
                 <span class="skil_discription">★★★☆☆</span>
               </div>
             </div>
@@ -257,10 +222,14 @@
         <h2>프로젝트</h2>
         <div class="project_nav">
           <button class="all" data-filter="all">All</button>
-          <button class="html" data-filter="html">Html</button>
-          <button class="react" data-filter="react">React</button>
+          <button class="html" data-filter="html">html</button>
+          <button class="react" data-filter="react">react</button>
           <button class="vue" data-filter="vue">Vue</button>
           <button class="bootstrap" data-filter="bootstrap">Bootstrap</button>
+        </div>
+        <div class="project_search">
+          <input type="text" class="search_box" placeholder="응용프로그램">
+          <button>검색</button>
         </div>
         <div class="project_box_wrap">
           <div class="project_box react">
@@ -269,7 +238,7 @@
             </div>
             <div class="project_info">
               <h3>React Meals</h3>
-              <span>React, css, jQuery.</span>
+              <span>react, css, jquery.</span>
               <div class="project_button">
                 <button class="project_icon">
                   <a href="https://react-meal-test.netlify.app/" target="_blank">site</a>
@@ -286,7 +255,7 @@
             </div>
             <div class="project_info">
               <h3>오설록</h3>
-              <span>Bootstrap, css.</span>
+              <span>bootstrap, css.</span>
               <div class="project_button">
                 <button class="project_icon">
                   <a href="https://runerain.github.io/oneme/osulloc/" target="_blank">site</a>
@@ -303,7 +272,7 @@
             </div>
             <div class="project_info">
               <h3>설빙</h3>
-              <p>Html, css, jQuery.</p>
+              <p>html, css, jquery.</p>
               <div class="project_button">
                 <button class="project_icon">
                   <a href="https://runerain.github.io/oneme/sulbing/" target="_blank">site</a>
@@ -320,7 +289,7 @@
             </div>
             <div class="project_info">
               <h3>설빙 메뉴</h3>
-              <p>Html, css, jQuery.</p>
+              <p>html, css, jquery.</p>
               <div class="project_button">
                 <button class="project_icon">
                   <a href="https://runerain.github.io/oneme/sulbing/menu/index.html" target="_blank">site</a>
@@ -354,7 +323,7 @@
             </div>
             <div class="project_info">
               <h3>Hotel Lago</h3>
-              <p>Html, css.</p>
+              <p>html, css.</p>
               <div class="project_button">
                 <button class="project_icon">
                   <a href="https://runerain.github.io/oneme/hotel_lago/index.html" target="_blank">site</a>
@@ -371,7 +340,7 @@
             </div>
             <div class="project_info">
               <h3>Alarm</h3>
-              <p>Html, css, js.</p>
+              <p>html, css, js.</p>
               <div class="project_button">
                 <button class="project_icon">
                   <a href="https://runerain.github.io/oneme/tester/alarm/index.html" target="_blank">site</a>
@@ -388,7 +357,7 @@
             </div>
             <div class="project_info">
               <h3>Time Alarm</h3>
-              <p>Html, css, js.</p>
+              <p>html, css, js.</p>
               <div class="project_button">
                 <button class="project_icon">
                   <a href="https://runerain.github.io/oneme/tester/time_alarm/index.html" target="_blank">site</a>
