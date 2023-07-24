@@ -4,12 +4,13 @@
   <li>google play store의 템플릿을 바탕으로 제작된 포토폴리오 페이지입니다.</li>
 </ul>
 <h3>응용 프로그램</h3>
-<ul>
-<li>html</li>
-<li>scss</li>
-<li>javascript</li>
+  <ul>
+  <li>html</li>
+  <li>scss</li>
+  <li>javascript</li>
+</ul>
 <h3> 구현된 기능</h3>
-<ol start="1">
+<ol>
   <li>스크롤 할 때, 애니메이션 효과나 헤더가 바뀝니다</li>
   <li>메뉴 이름을 누르면, 해당 페이지로 스크롤 이동됩니다.</li>
   <li>프로젝트 페이지에 있는 필터를 누르면, 해당된 메뉴가 나옵니다.</li>
