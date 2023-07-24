@@ -3,6 +3,11 @@
 <ul>
   <li>google play store의 템플릿을 바탕으로 제작된 포토폴리오 페이지입니다.</li>
 </ul>
+<h3>응용 프로그램</h3>
+<ul>
+<li>html</li>
+<li>scss</li>
+<li>javascript</li>
 <h3> 구현된 기능</h3>
 <ol>
   <li>스크롤 할 때, 애니메이션 효과나 헤더가 바뀝니다</li>
