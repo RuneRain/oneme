@@ -1,7 +1,7 @@
 <h1>OneMe's Play🎮</h1>
 <h3>소개</h3>
 <ul>
-  <li>google play store 페이지 템플릿을 바탕으로 제작된 페이지입니다.</li>
+  <li>google play store 페이지 템플릿을 바탕으로 제작된 포토폴리오 페이지입니다.</li>
 </ul>
 <h3> 구현된 기능</h3>
 <ol>
