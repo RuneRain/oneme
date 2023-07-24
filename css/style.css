@@ -46,15 +46,20 @@ body {
   align-items: center;
   background: #ff823a;
   width: 100%;
-  height: 960px;
-
+  height: 1020px;
+}
+@media (min-width:768px) and (max-width:1260px) {
+  #main {
+    width: 100%;
+    height: 900px;
+  }
+}
 @media (max-width:767px) {
   #main {
     width: 100%;
     height: 770px;
+  }
 }
-}
-
 #main .main_sub_text {
   flex: 1;
   text-align: center;
@@ -87,6 +92,12 @@ body {
   position: relative;
   left: -30%;
 }
+@media (max-width:767px) {
+  #main .main_info .main_text .main_name {
+    position: relative;
+    left: -40%;
+  }
+}
 #main .main_info .main_text .main_title {
   position: relative;
   right: -30%;
@@ -98,7 +109,6 @@ body {
   left: 0;
   width: 100%;
   color: #ff823a;
-  transform: translateY(-50px);
   transition: 1s ease-out;
   z-index: 1000;
 }
@@ -106,6 +116,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 40px;
   background: #fff1df;
   padding: 0 20px;
 }
@@ -141,7 +152,7 @@ body {
 
 .header {
   width: 100%;
-  height: 100px;
+  height: 80px;
   background: #ff823a;
 }
 .header .main_nav {
@@ -151,6 +162,11 @@ body {
   width: 50%;
   font-weight: bold;
   font-size: 24px;
+}
+@media (max-width:767px) {
+  .header .main_nav {
+    font-size: 16px;
+  }
 }
 .header .main_nav > li {
   display: inline-block;
@@ -166,7 +182,7 @@ body {
 .content #project {
   position: relative;
   top: 80px;
-  margin: 50px auto 0;
+  margin: 80px auto;
 }
 @media (min-width:1261px) {
   .content #about {
@@ -184,7 +200,16 @@ body {
 }
 @media (max-width:767px) {
   .content #about > div {
-    margin: 48px 0 0;
+    margin: 36px 0 10px;
+  }
+}
+@media (max-width:767px) {
+  .content #about .btn_title {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    margin-bottom: 20px;
   }
 }
 .content #about .tag_icon button:hover {
