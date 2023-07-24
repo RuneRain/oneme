@@ -47,7 +47,14 @@ body {
   background: #ff823a;
   width: 100%;
   height: 960px;
+
+@media (max-width:767px) {
+  #main {
+    width: 100%;
+    height: 770px;
 }
+}
+
 #main .main_sub_text {
   flex: 1;
   text-align: center;
