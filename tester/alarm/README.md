@@ -5,6 +5,12 @@
 <ul>
   <li>현재시간을 알려주고, input을 이용하여 만든 알람페이지입니다.</li>
 </ul>
+<h3>응용 프로그램</h3>
+<ul>
+<li>html</li>
+<li>css</li>
+<li>javascript</li>
+</ul>
 <h3> 구현된 기능</h3>
 <ol>
   <li>현재시간을 알려줍니다.</li>
