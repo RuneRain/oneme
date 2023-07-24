@@ -1,4 +1,4 @@
-<h1 color="orange">OneMe's Play🎮</h1>
+<h1>OneMe's Play🎮</h1>
 <dl>
 <h3>소개</h3>
 <ul>
